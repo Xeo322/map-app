@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 import DefaultLayout from '@/layouts/default.vue'
 
 const routes: RouteRecordRaw[] = [
@@ -25,6 +25,6 @@ const routes: RouteRecordRaw[] = [
 ]
 
 export default createRouter({
-  history: createWebHistory('/map-app/'),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes
 })
