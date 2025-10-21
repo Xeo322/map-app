@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "title": "Test task for SquareGps",
+    "task": "About task",
+    "map": "Map",
+    "languages": { "ru": "Russian", "en": "English" }
+  },
+  "tech": {
+    "vue": "Vuejs",
+    "vuex": "Vuex",
+    "vueRouter": "VueRouter",
+    "vuetify": "Vuetify"
+  },
+  "pages": {
+    "task": {
+      "title": "About the task",
+      "desc": "Short description, goals and requirements."
+    },
+    "map": {
+      "loadingAddress": "Loading address…",
+      "addressNotFound": "Address not found",
+      "markers": "Markers",
+      "marker": "Marker №{number}",
+      "noMarkers": "No markers yet",
+      "coordinates": "Coordinates:",
+      "lat": "Latitude: {lat}",
+      "lng": "Longitude: {lng}",
+      "markerNotifications": {
+        "notification": "Set the point on the map by clicking on the desired location.",
+        "addSuccess": "Marker added successfully.",
+        "addError": "Error adding marker."
+      }
+    },
+    "taskPage": {
+      "title": "SquareGPS test assignment",
+      "intro": "You need to build an app with {0}, {1}, {2}, {3}. The header must contain two menu items: “{4}” and “{5}”. The main area should display the content of these sections.",
+      "section": {
+        "about": "Section “About task”",
+        "map": "Section “Map”"
+      },
+      "aboutText": "This section should contain the text of the assignment, laid out similarly.",
+      "mapIntro": "The screen should display a map and a list (see example):",
+      "items": {
+        "1": {
+          "main": "1. On clicking the add button, the map switches to add-marker mode: a marker appears at the click position and a list record with the point address is created.",
+          "a": "a. You may use unknown free geocoding API, for example: {0}.",
+          "b": "b. If the address is not found, show an error and do not add the marker to the list."
+        },
+        "2": "2. Clicking a marker should highlight the corresponding list item.",
+        "3": "3. Clicking a list item should center the map on the marker.",
+        "4": "4. Markers must be stored locally and persist after page reload.",
+        "5": "5. The selected marker id must be reflected in the URL."
+      },
+      "storageNote": "Local data storage must be implemented as a service that emulates a backend (pseudo-async), saving data to {0}.",
+      "extra": {
+        "title": "Additionally:",
+        "1": "1. Consider mobile layouts.",
+        "2": "2. Provide localization.",
+        "3": "3. Use {0} to write one unit test for unknown component."
+      }
+    }
+  }
+}
