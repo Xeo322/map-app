@@ -6,9 +6,22 @@ import vuetify from 'vite-plugin-vuetify'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
+
+  const base = mode === 'production'
+      ? (env.VITE_BASE || '/map-app/')
+      : '/'
+
   return {
-    base: env.VITE_BASE || '/',
-    build: { outDir: 'docs' },
+    base,
+    build: {
+      outDir: 'docs',
+      // Добавляем обработку 404 страниц для SPA
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    },
     plugins: [
       vue(),
       vueDevTools(),
